@@ -1,0 +1,6 @@
+labels per class,prototypes,logistic regression,warm-start boosting,ensemble (final),best single learner
+5,0.597 ± 0.04,0.595 ± 0.037,0.551 ± 0.011,0.645 ± 0.025,prototypes
+25,0.64 ± 0.016,0.68 ± 0.016,0.676 ± 0.017,0.697 ± 0.014,logistic regression
+50,0.648 ± 0.006,0.69 ± 0.013,0.702 ± 0.015,0.71 ± 0.013,warm-start boosting
+100,0.657 ± 0.008,0.711 ± 0.008,0.737 ± 0.01,0.74 ± 0.01,warm-start boosting
+200,0.655 ± 0.007,0.728 ± 0.007,0.754 ± 0.006,0.755 ± 0.007,warm-start boosting

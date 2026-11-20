@@ -1,0 +1,15 @@
+decision,alternative,where,metric,chosen,alternative value,difference
+Per-slot haze filter + median of scenes,NB3 first-scene rule,NB5 §5.2b,"more clean pixel-years, lower jitter",,,
+City-year anomaly,raw reflectance,NB5 §5.4b,same-class city gap (mean |SD|),,,
+Spatial context features,none,NB5 §5.6b,neighbours share class vs chance,,,
+LightGBM,Random Forest (60 feat.),7.2,Madrid CV,0.651162093968896,0.6367441976386894,0.014417896330206625
+class_weight='balanced',no weights,7.3,Madrid CV,0.7746302846061622,0.7721772404819381,0.002453044124224091
+All feature groups,NB3 60 features,7.4,Madrid CV,0.7746302846061622,0.651162093968896,0.12346819063726622
+All feature groups,NB3 60 features,7.4,Amsterdam 25-shot,0.6941966380715697,0.6536752589697112,0.04052137910185849
+Per-city scaling,Madrid scaler,7.5,Amsterdam zero-shot,0.48558447971988167,0.5058241826114355,-0.0202397028915538
+Per-city scaling,Madrid scaler,7.5,Amsterdam 25-shot,0.6941966380715697,0.6932630298306254,0.0009336082409443502
+3-learner ensemble,recalibration only,7.6,Ams. mean over n,0.70937603691909,0.6160654405580821,0.09331059636100791
+3-learner ensemble,best single learner,7.6,Ams. mean over n,0.70937603691909,0.6793662150709264,0.030009821848163587
+No self-training,self-training,7.6,Ams. mean over n,0.70937603691909,0.7109261016086887,-0.0015500646895987291
+Gain is real (not leakage),"baseline, same blocked test",7.7,"Madrid, unseen districts",0.6338340730286105,0.5880964598153176,0.04573761321329295
+Gain is real (not leakage),"baseline, same blocked test",7.7,"Ams. average, unseen districts",0.692634828445781,0.5884511152158307,0.10418371322995024

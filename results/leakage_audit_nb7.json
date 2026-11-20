@@ -1,0 +1,61 @@
+{
+ "label_columns_in_features": [],
+ "max_abs_spearman_feature_vs_year": 0.5734538837877398,
+ "best_single_feature": [
+  "v2_nb6_aNIR_mean",
+  0.47868521656229035
+ ],
+ "full_model_3fold": 0.7746302846061622,
+ "trainonly_scaling_3fold": 0.7748384187029398,
+ "support_test_overlap": [
+  0,
+  50
+ ],
+ "madrid": {
+  "random folds": {
+   "ours, all features": 0.783,
+   "ours, no spatial features": 0.6867,
+   "baseline RF (NB3 features)": 0.6405
+  },
+  "unseen districts (blocked)": {
+   "ours, all features": 0.6338,
+   "ours, no spatial features": 0.615,
+   "baseline RF (NB3 features)": 0.5881
+  },
+  "drop": {
+   "ours, all features": -0.1492,
+   "ours, no spatial features": -0.0718,
+   "baseline RF (NB3 features)": -0.0524
+  }
+ },
+ "amsterdam": {
+  "ours, random": {
+   "5": 0.6451,
+   "25": 0.6969,
+   "50": 0.7097,
+   "100": 0.7404,
+   "200": 0.7551
+  },
+  "baseline, random": {
+   "5": 0.5745,
+   "25": 0.6009,
+   "50": 0.6158,
+   "100": 0.6161,
+   "200": 0.6138
+  },
+  "ours, blocked": {
+   "5": 0.6359,
+   "25": 0.6958,
+   "50": 0.6989,
+   "100": 0.7093,
+   "200": 0.7233
+  },
+  "baseline, blocked": {
+   "5": 0.527,
+   "25": 0.5998,
+   "50": 0.5953,
+   "100": 0.6111,
+   "200": 0.6091
+  }
+ }
+}
